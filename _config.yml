@@ -1,0 +1,39 @@
+# _config.yml — Just the Docs config for PyCliffordMCP
+title: "PyCliffordMCP Documentation"
+description: "Documentation for the PyCliffordMCP package (EdenCodeInc). Docs maintained by JohnnyDL."
+
+# Use the remote theme; local preview will use the just-the-docs gem you already have via Gemfile
+remote_theme: pmarsceill/just-the-docs
+# (Optionally change to `theme: "just-the-docs"` if you prefer local gem-based theme)
+
+# collections: treat _docs as the docs collection
+collections:
+  docs:
+    output: true
+    permalink: /:path/
+
+# Just the Docs specific settings
+just_the_docs:
+  logo: /assets/images/logo.png    # optional - add a logo file later
+  color_scheme: auto               # auto respects system dark/light
+  search_enabled: true
+  header_links:
+    - title: GitHub (package)
+      url: https://github.com/EdenCodeInc/PyCliffordMCP
+  show_edit_on_github: true
+  github_repo: JohnnyDL/PyCliffordMCP-docs
+
+# Sidebar order (files inside _docs/ must have these filenames)
+nav_order:
+  - index.md
+  - installation.md
+  - tutorial.md
+  - api_reference.md
+
+# default layout for docs (so pages in _docs use Just the Docs layout)
+defaults:
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: default
